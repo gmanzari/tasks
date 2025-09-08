@@ -12,16 +12,15 @@ export function fahrenheitToCelius(temperature: number): number {
  * Consumes three numbers and produces their sum. BUT you should only add a number
  * if the number is greater than zero.
  */
-export function add3(first: number, second: number, third: number): number {
-    return 0;
-}
+export function add3(first: number, second: number, third: number): number {}
 
 /**
  * Consumes a string and produces the same string in UPPERCASE and with an exclamation
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    let Upper_message: string = message.toUpperCase();
+    return Upper_message + "!";
 }
 
 /**
