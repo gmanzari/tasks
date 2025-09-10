@@ -1,3 +1,5 @@
+import { workerData } from "worker_threads";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -57,7 +59,9 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(words: string[]): number {
-    return 0;
+    const lessThan4 = (word: string): boolean => word.length < 4;
+    const wordsWLessThan4 = words.filter(lessThan4);
+    return wordsWLessThan4.length;
 }
 
 /**
