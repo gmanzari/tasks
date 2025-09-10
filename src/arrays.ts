@@ -22,7 +22,9 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const ints = numbers.map((number: string): number => parseInt(number, 10));
+    //fix
+    return ints;
 }
 
 /**
@@ -42,7 +44,12 @@ export const removeDollars = (amounts: string[]): number[] => {
  * in question marks ("?").
  */
 export const shoutIfExclaiming = (messages: string[]): string[] => {
-    return [];
+    const isQuestion = (message: string): boolean => !message.endsWith("?");
+    const noQuestions = messages.filter(isQuestion);
+    const shouts = noQuestions.map((message: string): string =>
+        message.endsWith("!") ? message.toUpperCase() : message,
+    );
+    return shouts;
 };
 
 /**
