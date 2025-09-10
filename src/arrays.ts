@@ -7,6 +7,7 @@ import { workerData } from "worker_threads";
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
+    const clonedNumbers = [...numbers];
     return numbers;
 }
 
@@ -38,7 +39,13 @@ export function stringsToIntegers(numbers: string[]): number[] {
  */
 // Remember, you can write functions as lambdas too! They work exactly the same.
 export const removeDollars = (amounts: string[]): number[] => {
-    return [];
+    const no$s = amounts.map((amount: string): string =>
+        amount.startsWith("$") ? amount.substring(1) : amount,
+    );
+    const ints = no$s.map((number: string): number =>
+        parseInt(number, 10) ? parseInt(number, 10) : 0,
+    );
+    return ints;
 };
 
 /**
