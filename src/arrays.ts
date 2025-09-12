@@ -7,8 +7,13 @@ import { workerData } from "worker_threads";
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    const clonedNumbers = [...numbers];
-    return numbers;
+    if (numbers.length === 0) {
+        return [];
+    } else if (numbers.length == 1) {
+        return [numbers[0], numbers[0]];
+    } else {
+        return [numbers[0], numbers[numbers.length - 1]];
+    }
 }
 
 /**
@@ -117,6 +122,8 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    //values.map ((value: number): number => value>0 ? sum + value:
-    return [];
+    const sum: number = 0;
+    const added = values.reduce((total: number[], curr: number) => {});
+    const valuesWSum = [...values, sum];
+    return valuesWSum;
 }
