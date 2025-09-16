@@ -46,7 +46,19 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    const type = question.type;
+    if (type === "short_answer_question") {
+        return true;
+    } else {
+        const optionsCheck = question.options.filter(
+            (option: string): boolean => option === answer,
+        );
+        if (optionsCheck.length >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /**
