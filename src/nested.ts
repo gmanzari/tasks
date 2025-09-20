@@ -50,7 +50,16 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    const findID = questions.find(
+        (question: Question): boolean => question.id === id,
+    );
+    if (findID) {
+        const notID = questions.filter(
+            (question: Question): boolean => question.id !== findID.id,
+        );
+        return notID;
+    }
+    return questions;
 }
 
 /***
