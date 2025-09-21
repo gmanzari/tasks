@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { makeBlankQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -20,12 +21,11 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
     const nonEmpty = questions.filter(
         (question: Question): boolean =>
-            question.body.length > 0 &&
-            question.expected.length > 0 &&
+            question.body !== "" ||
+            question.expected !== "" ||
             question.options.length > 0,
     );
     return nonEmpty;
-    /* this is wrong - have not fixed yet. don't forget to go back*******/
 }
 
 /***
@@ -159,6 +159,7 @@ export function addNewQuestion(
     name: string,
     type: QuestionType,
 ): Question[] {
+    blankQuestion = makeBlankQuestion();
     return [];
 }
 
