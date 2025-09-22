@@ -191,8 +191,12 @@ export function addNewQuestion(
     name: string,
     type: QuestionType,
 ): Question[] {
-    blankQuestion = makeBlankQuestion();
-    return [];
+    const questionsCopied = questions.map(
+        (question: Question): Question => question,
+    );
+    const blankQuestion = makeBlankQuestion(id, name, type);
+    const questionsPlusBlankQuestion = [...questionsCopied, blankQuestion];
+    return questionsPlusBlankQuestion;
 }
 
 /***
