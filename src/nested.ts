@@ -195,8 +195,7 @@ export function addNewQuestion(
         (question: Question): Question => question,
     );
     const blankQuestion = makeBlankQuestion(id, name, type);
-    const questionsPlusBlankQuestion = [...questionsCopied, blankQuestion];
-    return questionsPlusBlankQuestion;
+    return [...questionsCopied, blankQuestion];
 }
 
 /***
