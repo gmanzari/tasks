@@ -10,6 +10,7 @@ import { Counter } from "./components/Counter";
 import { ChangeType } from "./components/ChangeType";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
 
 function App(): React.JSX.Element {
     return (
@@ -92,6 +93,11 @@ function App(): React.JSX.Element {
             <div>
                 <p>
                     <TwoDice></TwoDice>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <CycleHoliday></CycleHoliday>
                 </p>
             </div>
         </>

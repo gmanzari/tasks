@@ -40,8 +40,8 @@ export function TwoDice(): React.JSX.Element {
                     <Button onClick={changeDieRight}>Roll Right</Button>
                 </div>
                 <div>
-                    {win && <div> You win!</div>}
-                    {lose && <div>You lose!</div>}
+                    {win && <div> You Win!</div>}
+                    {lose && <div>You Lose!</div>}
                 </div>
             </div>
             ;
