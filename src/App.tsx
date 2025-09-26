@@ -9,6 +9,7 @@ import { RevealAnswer } from "./components/RevealAnswer";
 import { Counter } from "./components/Counter";
 import { ChangeType } from "./components/ChangeType";
 import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
 
 function App(): React.JSX.Element {
     return (
@@ -69,13 +70,7 @@ function App(): React.JSX.Element {
             </div>
             <div>
                 <p>
-                    Counter 1: <Counter></Counter>
-                </p>
-                <p>
-                    Counter 2: <Counter></Counter>
-                </p>
-                <p>
-                    Counter 3: <Counter></Counter>
+                    Counter: <Counter></Counter>
                 </p>
             </div>
             <div>
@@ -92,6 +87,11 @@ function App(): React.JSX.Element {
             <div>
                 <p>
                     <StartAttempt></StartAttempt>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <TwoDice></TwoDice>
                 </p>
             </div>
         </>
