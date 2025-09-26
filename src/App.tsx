@@ -7,6 +7,8 @@ import { RevealAnswer } from "./components/RevealAnswer";
 //import { TwoDice } from "./components/TwoDice";
 //import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { ChangeType } from "./components/ChangeType";
+import { StartAttempt } from "./components/StartAttempt";
 
 function App(): React.JSX.Element {
     return (
@@ -80,6 +82,16 @@ function App(): React.JSX.Element {
                 <p>
                     {"What's the answer?"}
                     <RevealAnswer></RevealAnswer>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <ChangeType></ChangeType>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <StartAttempt></StartAttempt>
                 </p>
             </div>
         </>
