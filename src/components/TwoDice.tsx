@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 
 /**
@@ -12,13 +12,9 @@ export function d6(): number {
 }
 
 export function TwoDice(): React.JSX.Element {
-    let initLeft: number = d6();
-    let initRight: number = d6();
-    if (initLeft === initRight) {
-        initLeft = d6();
-    }
-    const [dieLeft, setDL] = useState<number>(initLeft);
-    const [dieRight, setDR] = useState<number>(initRight);
+    const [dieLeft, setDL] = useState<number>(1);
+    const [dieRight, setDR] = useState<number>(6);
+
     const win = dieLeft === dieRight && dieLeft !== 1;
     const lose = dieRight === 1 && dieLeft === 1;
 
@@ -44,7 +40,6 @@ export function TwoDice(): React.JSX.Element {
                     {lose && <div>You Lose!</div>}
                 </div>
             </div>
-            ;
         </div>
     );
 }

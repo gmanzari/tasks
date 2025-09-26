@@ -70,35 +70,23 @@ function App(): React.JSX.Element {
                 </Container>
             </div>
             <div>
-                <p>
-                    Counter: <Counter></Counter>
-                </p>
+                Counter: <Counter></Counter>
             </div>
             <div>
-                <p>
-                    {"What's the answer?"}
-                    <RevealAnswer></RevealAnswer>
-                </p>
+                {"What's the answer?"}
+                <RevealAnswer></RevealAnswer>
             </div>
             <div>
-                <p>
-                    <ChangeType></ChangeType>
-                </p>
+                <ChangeType></ChangeType>
             </div>
             <div>
-                <p>
-                    <StartAttempt></StartAttempt>
-                </p>
+                <StartAttempt></StartAttempt>
             </div>
             <div>
-                <p>
-                    <TwoDice></TwoDice>
-                </p>
+                <TwoDice></TwoDice>
             </div>
             <div>
-                <p>
-                    <CycleHoliday></CycleHoliday>
-                </p>
+                <CycleHoliday></CycleHoliday>
             </div>
         </>
     );
