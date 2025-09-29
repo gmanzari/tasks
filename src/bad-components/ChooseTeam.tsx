@@ -10,12 +10,12 @@ export function ChooseTeam(): React.JSX.Element {
         "Barbara Liskov",
         "Margaret Hamilton",
     ];
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
+    const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
     function chooseMember(newMember: string) {
         if (!team.includes(newMember)) {
-            setAllOptions([...team, newMember]);
+            setTeam([...team, newMember]);
         }
     }
 
