@@ -13,6 +13,8 @@ import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
 
 function App(): React.JSX.Element {
     return (
@@ -95,6 +97,12 @@ function App(): React.JSX.Element {
             </div>
             <div>
                 <CheckAnswer expectedAnswer={"hi"}></CheckAnswer>
+            </div>
+            <div>
+                <GiveAttempts></GiveAttempts>
+            </div>
+            <div>
+                <EditMode></EditMode>
             </div>
         </>
     );
