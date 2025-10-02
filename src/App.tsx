@@ -12,6 +12,7 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { CheckAnswer } from "./form-components/CheckAnswer";
 
 function App(): React.JSX.Element {
     return (
@@ -91,6 +92,9 @@ function App(): React.JSX.Element {
             </div>
             <div>
                 <DoubleHalf></DoubleHalf>
+            </div>
+            <div>
+                <CheckAnswer expectedAnswer={"hi"}></CheckAnswer>
             </div>
         </>
     );
