@@ -23,7 +23,7 @@ export function CheckAnswer({
                     isCorrect ?
                         "✔️"
                     :   "❌"
-                :   ""}
+                :   "❌"}
             </div>
         </div>
     );

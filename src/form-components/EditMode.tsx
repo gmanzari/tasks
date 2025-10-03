@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 
 export function EditMode(): React.JSX.Element {
     const [userName, setUserName] = useState<string>("Your Name");
-    const [isStudent, setIsStudent] = useState<boolean>(false);
+    const [isStudent, setIsStudent] = useState<boolean>(true);
     const [isEdit, setIsEdit] = useState<boolean>(false);
     function updateStudent(event: React.ChangeEvent<HTMLInputElement>) {
         setIsStudent(event.target.checked);
@@ -41,7 +41,7 @@ export function EditMode(): React.JSX.Element {
                     />
                 </div>
             :   <div>
-                    {userName} {isStudent ? " is " : " is not "}a student
+                    {`${userName} ${isStudent ? "is" : "is not"} a student`}
                 </div>
             }
         </div>
