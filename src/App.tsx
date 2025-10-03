@@ -15,6 +15,7 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { CheckAnswer } from "./form-components/CheckAnswer";
 import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.JSX.Element {
     return (
@@ -103,6 +104,9 @@ function App(): React.JSX.Element {
             </div>
             <div>
                 <EditMode></EditMode>
+            </div>
+            <div>
+                <ChangeColor></ChangeColor>
             </div>
         </>
     );
