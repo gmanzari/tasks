@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 
 export function GiveAttempts(): React.JSX.Element {
     const [attemptsLeft, setAttemptsLeft] = useState<number>(3);
