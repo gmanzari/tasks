@@ -16,6 +16,7 @@ import { CheckAnswer } from "./form-components/CheckAnswer";
 import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 import { ChangeColor } from "./form-components/ChangeColor";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 
 function App(): React.JSX.Element {
     return (
@@ -107,6 +108,12 @@ function App(): React.JSX.Element {
             </div>
             <div>
                 <ChangeColor></ChangeColor>
+            </div>
+            <div>
+                <MultipleChoiceQuestion
+                    options={["1", "2", "3", "4"]}
+                    expectedAnswer={"3"}
+                ></MultipleChoiceQuestion>
             </div>
         </>
     );
