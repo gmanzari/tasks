@@ -11,6 +11,7 @@ import { ChangeType } from "./components/ChangeType";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
 
 function App(): React.JSX.Element {
     return (
@@ -87,6 +88,9 @@ function App(): React.JSX.Element {
             </div>
             <div>
                 <CycleHoliday></CycleHoliday>
+            </div>
+            <div>
+                <DoubleHalf></DoubleHalf>
             </div>
         </>
     );
